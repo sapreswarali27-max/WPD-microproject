@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 15px 15px;
+    background: white;
+    color: #0f172a;
+    border: 2px solid skyblue;
+}
+
+.navbar a {
+     text-decoration: none;
+     color: black;
+     padding: 0 15px;
+     font-weight: 500;
+     font-family: sans-serif;
+}
+
+.navbar ul li {
+     margin: 0 15px;
+     cursor:pointer;
+} 
+
+.logo {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 90vh; 
+    background: url('image.jpg') no-repeat center/cover;
+    filter:blur(1) brightness(1) contrast(1.1)
+}
+
+/* Overlay */
+ .hero::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Content */
+.content {
+    position: relative;
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 500px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.buttons button {
+    padding: 10px 20px;
+    margin-right: 15px;
+    border: solid white;
+    cursor: pointer;
+}
+
+.btn1 {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn2 {
+    background: #00bcd4;
+    color: white;
+}
+
+/* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            color: black;
+           border: 2px solid skyblue;
+        }
