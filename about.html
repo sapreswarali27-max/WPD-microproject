@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Information - FitFusionHub</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 15px 15px;
+    background: white; 
+    color: skyblue;
+    border: 2px solid skyblue;
+}
+
+.navbar a {
+     text-decoration: none;
+     color: black;
+     padding: 0 15px;
+     font-weight: 500;
+     font-family: sans-serif;
+}
+
+.navbar ul li {
+     margin: 0 15px;
+     cursor:pointer;
+} 
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("new.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(8px);       /* blur effect */
+  z-index: -1;             /* send behind content */
+}
+
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:420px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card p{
+    text-align:left;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.images{
+    text-align:center;
+    margin-top:20px;
+}
+
+.images img{
+    width:220px;
+    height:150px;
+    margin:10px;
+    border-radius:8px;
+}
+
+.chart-box{
+    width:400px;
+    margin:30px auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2 class="logo">FitFusion Hub</h2>
+     <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="workout.html">Workout</a>
+          <a href="diet.html">Diet</a>
+          <a href="tips.html">Tips</a>
+          <a href="feedback.html">Feedback</a>
+
+</div>
+
+<div style="background:#4682B4; 
+color:white; 
+text-align:center; 
+padding:12px; 
+font-size:20px;">
+ Information
+</div>
+
+
+<div class="container">
+
+<div class="card">
+<h2 style="color:#4682B4;">&#128161; Importance of Fitness</h2>
+
+<p>
+<b>FitFusionHub</b> provides useful information about <b>health and fitness</b>.
+A healthy lifestyle includes regular <b>exercise &#128170;</b>, balanced diet,
+good <b>sleep</b>, and relaxing activities like <b>yoga &#129496;</b> and <b>meditation &#129496;</b>.
+These habits help us stay strong, active and energetic &#9889;.
+</p>
+
+<p>
+Maintaining good <b>health</b> is very important for students and working
+people. Daily physical activities improve <b>body strength</b>,
+increase <b>energy &#9889;</b>, and reduce <b>stress</b>.
+</p>
+
+<p>
+The <b>importance of fitness</b> in our daily life cannot be ignored.
+Regular physical activity helps maintain a healthy body weight,
+improves heart health and strengthens muscles and bones.
+</p>
+
+</div>
+
+<div class="card">
+<h2 style="color:#4682B4;">&#127919; Purpose of Fitness</h2>
+
+<p>&#10004; Improve body strength and energy &#9889;</p>
+<p>&#10004; Maintain healthy weight and heart health</p>
+<p>&#10004; Reduce stress and improve mental health &#129504;</p>
+<p>&#10004; Build discipline and confidence</p>
+<p>&#10004; Create a healthy lifestyle for future</p>
+
+<p>
+Another reason to maintain fitness is to improve <b>mental health &#129504;</b>.
+Activities like yoga and meditation help calm the mind and improve concentration.
+</p>
+
+<p>
+Getting proper sleep is also important. Sleep helps restore energy &#9889; and keeps the body active.
+</p>
+
+</div>
+
+</div>
+
+<h2 style="text-align:center;">&#127939; Health and Fitness Activities</h2>
+
+<div class="images">
+<img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74">
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b">
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352">
+</div>
+
+<h2 style="text-align:center;">&#128202; Activity Analysis</h2>
+
+<p style="text-align:center; width:80%; margin:auto;">
+The pie chart shows contribution of exercise, diet, sleep, yoga and meditation in fitness.
+</p>
+
+<div class="chart-box">
+<canvas id="myChart"></canvas>
+</div>
+
+<div style="background:#4682B4; 
+color:white; 
+text-align:center; 
+padding:10px;">
+&#169; 2026 FitFusionHub
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+var ctx = document.getElementById('myChart');
+
+new Chart(ctx,{
+type:'pie',
+data:{
+labels:[
+'Exercise',
+'Healthy Diet',
+'Sleep',
+'Yoga',
+'Meditation'
+],
+datasets:[{
+data:[30,25,20,15,10],
+backgroundColor:[
+'#ff6b6b',
+'#4ecdc4',
+'#ffe66d',
+'#5f27cd',
+'#1dd1a1'
+],
+borderColor:'#ffffff',
+borderWidth:2
+}]
+},
+options:{
+plugins:{
+legend:{
+position:'bottom'
+}
+}
+}
+});
+</script>
+
+</body>
+</html>
